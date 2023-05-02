@@ -1,0 +1,62 @@
+Enter password: *****
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 20
+Server version: 5.5.62 MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> create database dbms;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> use dbms;
+Database changed
+mysql> create table Ipl(Team_no int(2),Team_name varchar(10),Team_location varchar(10));
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> create table player (player_name varchar(10),player_no int(2),player_age int(2));
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> desc Ipl;
++---------------+-------------+------+-----+---------+-------+
+| Field         | Type        | Null | Key | Default | Extra |
++---------------+-------------+------+-----+---------+-------+
+| Team_no       | int(2)      | YES  |     | NULL    |       |
+| Team_name     | varchar(10) | YES  |     | NULL    |       |
+| Team_location | varchar(10) | YES  |     | NULL    |       |
++---------------+-------------+------+-----+---------+-------+
+3 rows in set (0.02 sec)
+
+mysql> desc player;
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| player_name | varchar(10) | YES  |     | NULL    |       |
+| player_no   | int(2)      | YES  |     | NULL    |       |
+| player_age  | int(2)      | YES  |     | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+3 rows in set (0.01 sec)
+
+mysql> show tables;
++----------------+
+| Tables_in_dbms |
++----------------+
+| ipl            |
+| player         |
++----------------+
+2 rows in set (0.00 sec)
+mysql> drop table player ;
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> show tables;
++----------------+
+| Tables_in_dbms |
++----------------+
+| ipl            |
++----------------+
+1 row in set (0.00 sec)
